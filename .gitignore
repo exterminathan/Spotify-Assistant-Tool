@@ -26,4 +26,5 @@ dist-ssr
 *.sw?
 
 # Credentials and other sensitive files
-secrets.ts
+# clientId can be public
+# secrets.ts
