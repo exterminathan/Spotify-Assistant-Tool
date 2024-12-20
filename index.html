@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML/CSS/TS Deno Template</title>
-    <script type="module" src="./src/main.ts"></script>
+    <title>Spotify PKCE Auth App</title>
+    <!-- <link rel="stylesheet" href="src/style.css"> -->
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a simple HTML page.</p>
+    <header>
+        <h1>Spotify PKCE Auth App</h1>
+    </header>
+
+    <main>
+        <section id="controls">
+            <button id="load">Load API</button>
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="album_art">Show Album Art</button>
+        </section>
+        <section id="displays">
+            <img id="album_art_display" src="" alt="Album Art">
+        </section>
+
+        <section id="log">
+            <h2>Logs</h2>
+            <div id="messages"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by Spotify API</p>
+    </footer>
+
+    <script type="module" src="src/spotify.ts"></script>
 </body>
 </html>
