@@ -125,8 +125,10 @@ export const refreshToken = async (refreshToken: string): Promise<any> => {
 
 
 // Spotify Authentication with PKCE
-const codeVerifier = getCodeVerifier();
+let codeChallenge: string;
 
-const codeChallenge = base64encode(await sha256(codeVerifier));
-
+(async () => {
+    const codeVerifier = getCodeVerifier();
+    codeChallenge = base64encode(await sha256(codeVerifier));
+})();
 
